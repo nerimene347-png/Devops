@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Git') {
+        stage('Checkout GIT') {
             steps {
                 echo 'Pulling...'
                 git branch: 'main',
@@ -10,9 +10,9 @@ pipeline {
             }
         }
 
-        stage('Maven Build') {
+        stage('Date systeme') {
             steps {
-                sh 'mvn -version'
+                sh 'date'
             }
         }
     }
